@@ -1,0 +1,7 @@
+C:\Users\lukasz.choros\source\repos\ChampionProblems\CrossingSequences\bin\Debug\CrossingSequences.exe.config
+C:\Users\lukasz.choros\source\repos\ChampionProblems\CrossingSequences\bin\Debug\CrossingSequences.exe
+C:\Users\lukasz.choros\source\repos\ChampionProblems\CrossingSequences\bin\Debug\CrossingSequences.pdb
+C:\Users\lukasz.choros\source\repos\ChampionProblems\CrossingSequences\obj\Debug\CrossingSequences.csprojAssemblyReference.cache
+C:\Users\lukasz.choros\source\repos\ChampionProblems\CrossingSequences\obj\Debug\CrossingSequences.csproj.CoreCompileInputs.cache
+C:\Users\lukasz.choros\source\repos\ChampionProblems\CrossingSequences\obj\Debug\CrossingSequences.exe
+C:\Users\lukasz.choros\source\repos\ChampionProblems\CrossingSequences\obj\Debug\CrossingSequences.pdb
