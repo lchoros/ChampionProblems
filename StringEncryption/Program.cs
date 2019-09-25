@@ -10,29 +10,27 @@ namespace StringEncryption
     {
         static void Main(string[] args)
         {
-            char letter = char.Parse(Console.ReadLine());
-            Console.WriteLine(Encrypt(letter));
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                char letter = char.Parse(Console.ReadLine());
+                Console.Write(Encrypt(letter));
+            }
         }
 
         static string Encrypt(char letter)
         {
             int asciiCode = letter;
-            int firstDigit = 0;
-            int lastDigit = 0;
-
-            if(asciiCode < 100)
-            {
-                firstDigit = asciiCode / 10;
-            }
-            else
+            int firstDigit = asciiCode / 10;
+            int lastDigit = asciiCode % 10;
+            if(asciiCode > 99)
             {
                 firstDigit = asciiCode / 100;
             }
-            lastDigit = asciiCode % 10;
 
-            var x = asciiCode + lastDigit;
-            var z = asciiCode - firstDigit;
-            return x + ""+ firstDigit+""+lastDigit;
+            int firstLetter = asciiCode + lastDigit;
+            int lastLetter = asciiCode - firstDigit;
+            return $"{(char)firstLetter}{firstDigit}{lastDigit}{(char)lastLetter}";
         }
     }
 }
