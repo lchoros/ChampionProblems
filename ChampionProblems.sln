@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalExpression", "Nume
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringEncryption", "StringEncryption\StringEncryption.csproj", "{DEA0B933-01BF-47CB-ADF2-B3EC74920BD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows", "BullsAndCows\BullsAndCows.csproj", "{08867000-BFAB-4BE7-B55B-5262E93F9302}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DEA0B933-01BF-47CB-ADF2-B3EC74920BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEA0B933-01BF-47CB-ADF2-B3EC74920BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEA0B933-01BF-47CB-ADF2-B3EC74920BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08867000-BFAB-4BE7-B55B-5262E93F9302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08867000-BFAB-4BE7-B55B-5262E93F9302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08867000-BFAB-4BE7-B55B-5262E93F9302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08867000-BFAB-4BE7-B55B-5262E93F9302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
