@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BullsAndCows
 {
@@ -25,55 +21,58 @@ namespace BullsAndCows
                 int b = 0;
                 int c = 0;
 
-                int firstGuessDigit = secret / 1000 % 10;
-                int secondGuessDigit = secret / 100 % 10;
-                int thirdGuessDigit = secret / 10 % 10;
-                int fourthGuessDigit = secret / 1 % 10;
+                int firstGuessDigit = firstSecretDigit;
+                int secondGuessDigit = secondSecretDigit;
+                int thirdGuessDigit = thirdSecretDigit;
+                int fourthGuessDigit = fourthSecretDigit;
 
                 int firstDigit = i / 1000 % 10;
                 int secondDigit  = i / 100 % 10;
                 int thirdDigit = i/ 10 % 10;
                 int fourthDigit  = i % 10;
-
+                if(firstDigit == 0 || secondDigit == 0 || thirdDigit == 0 || fourthDigit == 0)
+                {
+                    continue;
+                }
                 if (firstDigit == firstGuessDigit)
                 {
                     firstDigit = -1;
                     firstGuessDigit = -2;
                     b++;
                 }
-                if (secondDigit == secondSecretDigit)
+                if (secondDigit == secondGuessDigit)
                 {
                     secondDigit = -1;
-                    secondSecretDigit = -2;
+                    secondGuessDigit = -2;
                     b++;
                 }
-                if (thirdDigit == thirdSecretDigit)
+                if (thirdDigit == thirdGuessDigit)
                 {
                     thirdDigit = -1;
-                    thirdSecretDigit = -2;
+                    thirdGuessDigit = -2;
                     b++;
                 }
-                if (fourthDigit == fourthSecretDigit)
+                if (fourthDigit == fourthGuessDigit)
                 {
 
                     fourthDigit = -1;
-                    fourthSecretDigit = -2;
+                    fourthGuessDigit = -2;
                     b++;
                 }
 
-                if (firstDigit == secondSecretDigit)
+                if (firstDigit == secondGuessDigit)
                 {
-                    secondSecretDigit = -2;
+                    secondGuessDigit = -2;
                     c++;
                 }
-                else if (firstDigit == thirdSecretDigit)
+                else if (firstDigit == thirdGuessDigit)
                 {
-                    thirdSecretDigit = -2;
+                    thirdGuessDigit = -2;
                     c++;
                 }
-                else if (firstDigit == fourthSecretDigit)
+                else if (firstDigit == fourthGuessDigit)
                 {
-                    fourthSecretDigit = -2;
+                    fourthGuessDigit = -2;
                     c++;
                 }
 
@@ -82,46 +81,46 @@ namespace BullsAndCows
                     firstGuessDigit = -2;
                     c++;
                 }
-                else if (secondDigit == thirdSecretDigit)
+                else if (secondDigit == thirdGuessDigit)
                 {
-                    thirdSecretDigit = -2;
+                    thirdGuessDigit = -2;
                     c++;
                 }
-                else if (secondDigit == fourthSecretDigit)
+                else if (secondDigit == fourthGuessDigit)
                 {
-                    fourthSecretDigit = -2;
+                    fourthGuessDigit = -2;
                     c++;
                 }
 
                 if (thirdDigit == firstGuessDigit)
                 {
-                    secondSecretDigit = -2;
+                    secondGuessDigit = -2;
                     c++;
                 }
-                else if (thirdDigit == secondSecretDigit)
+                else if (thirdDigit == secondGuessDigit)
                 {
-                    thirdSecretDigit = -2;
+                    thirdGuessDigit = -2;
                     c++;
                 }
-                else if (thirdDigit == fourthSecretDigit)
+                else if (thirdDigit == fourthGuessDigit)
                 {
-                    fourthSecretDigit = -2;
+                    fourthGuessDigit = -2;
                     c++;
                 }
 
                 if (fourthDigit == firstGuessDigit)
                 {
-                    secondSecretDigit = -2;
+                    secondGuessDigit = -2;
                     c++;
                 }
-                else if (fourthDigit == secondSecretDigit)
+                else if (fourthDigit == secondGuessDigit)
                 {
-                    thirdSecretDigit = -2;
+                    thirdGuessDigit = -2;
                     c++;
                 }
-                else if (fourthDigit == thirdSecretDigit)
+                else if (fourthDigit == thirdGuessDigit)
                 {
-                    fourthSecretDigit = -2;
+                    fourthGuessDigit = -2;
                     c++;
                 }
 
@@ -129,7 +128,7 @@ namespace BullsAndCows
                 if (b == bulls && c == cows)
                 {
                     solutionFound = true;
-                    Console.Write("{0}{1}{2}{3} ", firstDigit, secondDigit, thirdDigit, fourthDigit);
+                    Console.Write("{0}{1}{2}{3} ", i / 1000 % 10, i / 100 % 10, i/ 10 % 10,i % 10);
                 }
             }
 
